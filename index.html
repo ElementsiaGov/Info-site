@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elementsian.info.gov</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Styling for sections */
+    .category {
+      padding: 80px 60px; /* Increase vertical padding for a taller section */
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      margin-top: 80px;
+    }
+
+    /* Define unique styles for the welcome section */
+    #welcome {
+      background-image: url('https://images.fineartamerica.com/images-medium-large-5/frozen-new-york-at-dawn-regina-geoghan.jpg');
+      background-color: #f0f0f0;
+      background-size: cover;
+      position: relative;
+      text-align: center;
+      padding: 150px; /* Increase padding to enlarge the welcome section */
+      font-size: 24px; /* Increase font size for the welcome text */
+      height: 600px; /* Increase the height of the welcome section */
+    }
+
+    /* Add a little more padding to the navigation bar for better visibility */
+    #navbar {
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: 1; /* Ensure the navigation bar is on top of other elements */
+    }
+
+    /* Style the navigation links */
+    .nav-link {
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      margin: 0 10px; /* Add some spacing between links */
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #555; /* Change background color on hover */
+    }
+
+    /* Define background images for each category */
+    #geography {
+      background-color: #e0e0e0;
+      background-image: url('path/to/geography-background.jpg');
+    }
+
+    /* Add other category background images here */
+
+    /* ... */
+
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div id="navbar">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="news.html" class="nav-link">News</a>
+    <a href="foreignaffairs.html" class="nav-link">Foreign Affairs</a>
+    <a href="geography.html" class="nav-link">Geography</a>
+    <a href="history.html" class="nav-link">History</a>
+    <a href="economy.html" class="nav-link">Economy</a>
+    <a href="culture.html" class="nav-link">Culture</a>
+    <a href="defense.html" class="nav-link">Defense</a>
+    <a href="healthcare.html" class="nav-link">Healthcare</a>
+    <a href="socialwelfare.html" class="nav-link">Social Welfare</a>
+    <a href="spaceadmin.html" class="nav-link">Space Administration</a>
+  </div>
+
+  <!-- Welcome page -->
+  <div id="welcome">
+    <h1>Welcome to Elementsia</h1>
+    <p>This is the factbook of our fictional nation. Explore the categories below to learn more about our country.</p>
+  </div>
+
+  <!-- News section -->
+  <div id="news" class="category" style="background-image: url('https://media.discordapp.net/attachments/1101785167233826846/1134835023648935996/News_Elementsia.png');">
+    <h2>News</h2>
+    <p>Stay updated with the latest news and events from our nation.</p>
+  </div>
+
+  <!-- Foreign Affairs section -->
+  <div id="foreignaffairs" class="category" style="background-image: url('path/to/foreignaffairs-background.jpg');">
+    <h2>Foreign Affairs</h2>
+    <p>Explore our nation's international relations and foreign policy.</p>
+  </div>
+
+  <!-- Geography section -->
+  <div id="geography" class="category" style="background-image: url('path/to/geography-background.jpg');">
+    <h2>Geography</h2>
+    <p>Information about the geography of our nation will go here.</p>
+  </div>
+
+  <!-- History section -->
+  <div id="history" class="category" style="background-image: url('https://media.discordapp.net/attachments/1101785167233826846/1134831944933318676/Elementsian_history.png');">
+    <h2>History</h2>
+    <p>Explore the rich history of our nation here.</p>
+  </div>
+
+  <!-- Economy section -->
+  <div id="economy" class="category" style="background-image: url('https://media.discordapp.net/attachments/1101785167233826846/1134823505632952370/Elementsian_Economy.png');">
+    <h2>Economy</h2>
+    <p>Learn about the economy and industries of our nation.</p>
+  </div>
+
+  <!-- Culture section -->
+  <div id="culture" class="category" style="background-image: url('https://media.discordapp.net/attachments/1101785167233826846/1134821550030331954/Elementsian_culture.png');">
+    <h2>Culture</h2>
+    <p>Discover the vibrant culture and traditions of our nation.</p>
+  </div>
+
+  <!-- Defense section -->
+  <div id="defense" class="category" style="background-image: url('https://media.discordapp.net/attachments/1101785167233826846/1134820155852070932/Elementsian_defense.png');">
+    <h2>Defense</h2>
+    <p>Explore the defense capabilities and military history of our nation.</p>
+  </div>
+
+  <!-- Healthcare section -->
+  <div id="healthcare" class="category" style="background-image: url('https://cdn.discordapp.com/attachments/1101785167233826846/1134811893190631424/Untitled_design_2.png');">
+    <h2>Healthcare</h2>
+    <p>Learn about the healthcare system and medical advancements in our nation.</p>
+  </div>
+
+  <!-- Social Welfare section -->
+  <div id="socialwelfare" class="category" style="background-image: url('https://media.discordapp.net/attachments/1101785167233826846/1134819450596626442/Social_welfare_Alo.png');">
+    <h2>Social Welfare</h2>
+    <p>Discover the social welfare programs and initiatives in our nation.</p>
+  </div>
+
+  <!-- Space Administration section -->
+  <div id="spaceadmin" class="category" style="background-image: url('https://media.discordapp.net/attachments/1101785167233826846/1134817234276061245/Elementsian_space.png');">
+    <h2>Space Administration</h2>
+    <p>Learn about our nation's achievements in space exploration and administration.</p>
+  </div>
+</body>
+</html>
