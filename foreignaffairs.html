@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elementsian Foreign Affairs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Styling for the navigation bar */
+    #navbar {
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    /* Style the navigation links */
+    .nav-link {
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      margin: 0 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #555;
+    }
+
+    /* Custom styles for the content container */
+    .container {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    /* Style the search bar */
+    .search-bar {
+      width: 100%;
+      padding: 15px; /* Increased padding for the search bar */
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    /* Style for the black line at the top */
+    .black-line {
+      height: 4px;
+      background-color: black;
+    }
+
+    /* Style for the article titles */
+    .article-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Style for the article content */
+    .article-content {
+      margin-top: 10px;
+    }
+
+    /* Style for the article box/frame */
+    .article-box {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* Style for hiding articles that don't match the search query */
+    .hidden {
+      display: none;
+    }
+
+    /* Additional styles to make the page scrollable */
+    .main-content {
+      padding-top: 60px; /* Ensure the content doesn't overlap with the top menu */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .search-bar-container {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .foreign-affairs-container {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    /* Style for the black line on top of "Foreign Affairs" heading */
+    .black-line-top {
+      height: 4px;
+      background-color: black;
+    }
+
+    /* Style for the diplomatic rating section */
+    .diplomatic-rating {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #333; /* Dark text color for diplomatic rating */
+    }
+
+    /* Style for the travel census section */
+    .travel-census {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <div id="navbar">
+    <a href="index.html#welcome" class="nav-link">Home</a>
+    <a href="news.html" class="nav-link">News</a>
+    <a href="foreignaffairs.html" class="nav-link">Foreign Affairs</a>
+    <a href="geography.html" class="nav-link">Geography</a>
+    <a href="history.html" class="nav-link">History</a>
+    <a href="economy.html" class="nav-link">Economy</a>
+    <a href="culture.html" class="nav-link">Culture</a>
+    <a href="defense.html" class="nav-link">Defense</a>
+    <a href="healthcare.html" class="nav-link">Healthcare</a>
+    <a href="socialwelfare.html" class="nav-link">Social Welfare</a>
+    <a href="spaceadmin.html" class="nav-link">Space Administration</a>
+  </div>
+
+  <!-- Content container -->
+  <div class="container main-content" id="foreignAffairsSection">
+    <div class="black-line-top"></div>
+    <h1>Elementsian Foreign Affairs</h1>
+    <div class="search-bar-container">
+      <input type="text" class="search-bar" placeholder="Search foreign affairs..." id="searchInput">
+    </div>
+    <div class="foreign-affairs-container" id="foreignAffairsContent">
+      <div class="article-box">
+        <h2 class="article-title">Orianne</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 72📉</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Inoffensive Centrist Democracy Communists</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">Rotondia</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 84📉</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Iron Fist Consumerists</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">Kartof</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 90📉</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Champions of Commerce</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">Isomedia</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 78📈</p>
+        <p class="article-content travel-census">Travel Census: 🟨 - Caution advised</p>
+        <p class="article-content">Left-Leaning College State Deluded Tax and Spend Hypocrites</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">Stroana</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 87🟨</p>
+        <p class="article-content travel-census">Travel Census: 🟨 - Caution advised</p>
+        <p class="article-content">Authoritarian Democracy</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">Rantatord</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 74📈</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Father Knows Best State</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">ITC</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 81📉</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Father Knows Best State</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">DENIS PAVEL</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 68📈</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Psychotic Dictatorship</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">LAMPLIGHT</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 86📈</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Authoritarian Democracy</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">THE OUTER RIM</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 84📈</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Father Knows Best State</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">MINU</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 74📈</p>
+        <p class="article-content travel-census">Travel Census: 🟩 - Safe</p>
+        <p class="article-content">Psychotic Dictatorship</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">Roylaii</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 70📉</p>
+        <p class="article-content travel-census">Travel Census: 🟨 - Caution advised</p>
+        <p class="article-content">Father Knows Best State</p>
+      </div>
+
+      <div class="article-box">
+        <h2 class="article-title">Namibdia</h2>
+        <p class="article-content diplomatic-rating">Diplomatic Rating: 65📉</p>
+        <p class="article-content travel-census">Travel Census: 🟨 - Caution advised</p>
+        <p class="article-content">Father Knows Best State</p>
+      </div>
+
+      <!-- Add the remaining nations here -->
+
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for the search functionality
+    function handleSearch() {
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      const articles = document.getElementsByClassName("article-box");
+
+      for (const article of articles) {
+        const articleContent = article.innerText.toLowerCase();
+        const isMatch = articleContent.includes(searchQuery);
+
+        if (!isMatch) {
+          article.classList.add("hidden");
+        } else {
+          article.classList.remove("hidden");
+        }
+      }
+    }
+
+    document.getElementById("searchInput").addEventListener("input", handleSearch);
+  </script>
+</body>
+</html>
