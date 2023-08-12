@@ -1,104 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Elementsian Culture</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementsia Factbook - Culture</title>
+    <style>
+        /* Reset default styles and set some global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
 
-    /* Styling for the navigation bar (same as before) */
-    #navbar {
-      background-color: #333;
-      padding: 15px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      z-index: 1; /* Ensure the navigation bar is on top of other elements */
-    }
+        header {
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+            text-align: center;
+            padding: 1rem;
+        }
 
-    /* Style the navigation links (same as before) */
-    .nav-link {
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      margin: 0 10px; /* Add some spacing between links */
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
+        header h1 {
+            margin: 0;
+        }
 
-    .nav-link:hover {
-      background-color: #555; /* Change background color on hover */
-    }
+        nav {
+            background-color: #ffffff; /* White */
+            padding: 0.5rem;
+        }
 
-    /* Custom styles for the content container (same as before) */
-    .container {
-      max-width: 800px;
-      margin: 80px auto;
-      padding: 20px;
-    }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
 
-    /* Style the search bar (same as before) */
-    .search-bar {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
+        nav li {
+            display: inline;
+        }
 
-    /* Style for the back to home button (same as before) */
-    .back-to-home {
-      background-color: #555;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-      margin: 10px;
-    }
+        nav a {
+            color: #1a2b3c; /* Deeper blue text */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
 
-    /* Style for the black line at the top (same as before) */
-    .black-line {
-      height: 4px;
-      background-color: black;
-    }
-  </style>
+        nav a:hover {
+            background-color: #a9a9a9; /* Sage green on hover */
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        main h2 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+        }
+
+        /* Culture sections */
+        .section {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Images */
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+ /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation bar (same as before) -->
-  <div id="navbar">
-    <a href="index.html#welcome" class="nav-link">Home</a>
-    <a href="news.html" class="nav-link">News</a>
-    <a href="foreignaffairs.html" class="nav-link">Foreign Affairs</a>
-    <a href="geography.html" class="nav-link">Geography</a>
-    <a href="history.html" class="nav-link">History</a>
-    <a href="economy.html" class="nav-link">Economy</a>
-    <a href="culture.html" class="nav-link">Culture</a>
-    <a href="defense.html" class="nav-link">Defense</a>
-    <a href="healthcare.html" class="nav-link">Healthcare</a>
-    <a href="socialwelfare.html" class="nav-link">Social Welfare</a>
-    <a href="spaceadmin.html" class="nav-link">Space Administration</a>
-  </div>
+    <header>
+        <h1>Elementsia Factbook - Culture</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="geography.html">Geography</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="legislation.html">Legislation</a></li>
+            <li><a href="space-administration.html">Space administration</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li><a href="social-welfare.html">Social welfare</a></li>
+            <li><a href="foreign-affairs.html">Foreign affairs</a></li>
+            <li><a href="defense.html">Defense</a></li>
+            <li><a href="economy.html">Economy</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section">
+            <h2>Cultural Diversity</h2>
+            <p>Elementsia's culture is a rich tapestry woven from the threads of diverse traditions, languages, and customs brought together by its people. The nation's central location has made it a crossroads for trade and exchange, fostering a fusion of ideas and a celebration of diversity.</p>
+            <p>The Cultural Diversity Festival, held annually, showcases the vibrant array of Elementsian traditions, from dance performances to culinary delights.</p>
+        </section>
 
-  <!-- Content container -->
-  <div class="container">
-    <div class="black-line"></div>
-    <h1>Elementsian Culture</h1>
-    <input type="text" class="search-bar" placeholder="Search culture...">
-    <p>
-      Add your culture content here. Showcase the diverse traditions, arts, and customs of our nation.
-    </p>
-    <p>
-      Customize this page with more information about culture, images, and links as needed.
-    </p>
-    <!-- Back to Home link -->
-    <a href="index.html#welcome" class="back-to-home">Go Home</a>
-  </div>
+      <section class="section">
+    <h2>Arts and Expression</h2>
+    <p>Elementsia's artistic landscape is a reflection of its diverse cultural heritage and vibrant creativity. The nation has produced a plethora of visual artworks, music, literature, and performing arts that capture the essence of its people.</p>
+
+    <div class="artwork">
+        <img class="small-image" src="https://th.bing.com/th/id/OIG.jkpzRN4FPSKKTSJwox0S?pid=ImgGn" alt="Artwork 1">
+        <p class="artwork-description">This picture was painted by Golbarto Guntavino, in an effort to promote space. The Elementsian space administration pays tribute to Golbarto.</p>
+    </div>
+
+    <div class="artwork">
+        <img class="small-image" src="https://th.bing.com/th/id/OIG.C5NmV6yofVYj8m00ywj8?pid=ImgGn" alt="Artwork 2">
+        <p class="artwork-description">This portrait portrays Elementsian astrophysicist, Turman Gebaat, in the 1978's, right after his theory of space time.</p>
+    </div>
+</section>
+
+        <section class="section">
+            <h2>Religion</h2>
+            <p>Most Elementsians are Christsian, Protestant. Many however are also catholic. Christianity is the only allowed religion in the RFE as the local culture fully supports it.
+ The Temple of Serenity, nestled in the tranquil countryside, serves as a place of meditation and reflection for many.</p>
+<img class="image" src="https://media.discordapp.net/attachments/1078929997949050930/1079110760724189344/4priory_church_boxgrove_c_derek_kendall.jpg" alt="Temple of Serenity"></p>
+        </section>
+
+        <section class="section">
+            <h2>Tradition</h2>
+            <h>Gedenktenis vergesaam<h/>
+<p>This tradition has been carried by true Elementsians from the civil war. It reviews the promise of the Elementsians to God that they will never leave his side for what he has done to them is good. This to them is no joke.
+During the ceremony they usally pray and renew their promise.
+
+</p>
+ <h>Gedagtegenis vannte onse God<h/>
+<p>Elementsians truly are dedicated to their God, this ceremony usally revolves around prayer to God for the good and evil in the world. The love for his people and his promises that never get broken.<p/>
+            <p>Local artisans often incorporate traditional motifs into their crafts, preserving the legacy of ancient traditions.</p>
+        </section>
+
+        <section class="section">
+    <h2>Clothing</h2>
+    <h3>Casual Male Outfits</h3>
+    <img class="image" src="https://media.discordapp.net/attachments/1084932363651399710/1084934420508704778/smart-casual-dress-code-men-office-style-luxe-digital.jpg?width=504&height=630" alt="Casual Male Outfit 1">
+    <img class="image" src="https://media.discordapp.net/attachments/1084932363651399710/1084934420806512660/153b23009cda023d31c65621d90af180.jpg" alt="Casual Male Outfit 2">
+
+    <h3>Casual Female Outfits</h3>
+    <img class="image" src="https://media.discordapp.net/attachments/1084932363651399710/1084934715309563994/a3c26861dbe7eb8f00b1a765d0299b52--business-clothes-trendy-business-attire.jpg" alt="Casual Female Outfit 1">
+    <img class="image" src="https://media.discordapp.net/attachments/1084932363651399710/1084934715619946607/dc3a4306f82f8a4882e1d8f3341c0052.jpg" alt="Casual Female Outfit 2">
+</section>
+
+        <section class="section">
+    <h2>Architecture</h2>
+    <p>Elementsian architecture is a unique blend of various styles, drawing inspiration from South African, American, European, and tropical island designs. Over time, the architecture evolved to accommodate the rapid growth of cities, leading to a fusion of forms that reflect the nation's diverse influences.</p>
+
+    <p>Many urban centers in Elementsia adopted a high-density Japanese architectural style, creating a distinctive urban landscape characterized by towering skyscrapers and efficient land use.</p>
+
+    <img class="image" src="https://media.discordapp.net/attachments/1084932398363459684/1084935452592713808/dea3324d-3d47-4437-9033-57cd14fdb87c.jpg?width=630&height=630" alt="Elementsian Architecture 1">
+    <img class="image" src="https://media.discordapp.net/attachments/1084932398363459684/1084935452810805328/3c834e20-bea4-4e7c-8827-84d5b5ff3256.jpg?width=630&height=630" alt="Elementsian Architecture 2">
+    <img class="image" src="https://media.discordapp.net/attachments/1084932398363459684/1084935451284086834/463b2679-0fde-4db8-8059-983e20883066.jpg?width=630&height=630" alt="Elementsian Architecture 3">
+</section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Elementsia Factbook</p>
+    </footer>
 </body>
 </html>
