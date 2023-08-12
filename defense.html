@@ -1,146 +1,288 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Elementsian Defense</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementsia Factbook - Defense</title>
+    <style>
+        /* Reset default styles and set some global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #ffffff; /* White */
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+        nav a {
+            color: #1a2b3c; /* Deeper blue text */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background-color: #a9a9a9; /* Sage green on hover */
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        main h2 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+        }
+   /* Modern search bar styles */
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 5px 10px;
+            background-color: #1a2b3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Filter options */
+        .filter-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter {
+            padding: 5px 10px;
+            background-color: #1a2b3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Overview section */
+        .overview {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Defense articles */
+        .defense-frame {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .defense-image {
+            max-width: 100px; /* Adjust the size as needed */
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 5px;
+        }
+
+        .defense-details {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #666;
+        }
+
+        /* Filter section */
+        .filter-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .filter {
+            padding: 5px 10px;
+            background-color: #1a2b3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+  /* Filter section */
+    .filter-container {
+        text-align: center;
+        margin-top: 10px;
     }
 
-    /* Styling for the navigation bar */
-    #navbar {
-      background-color: #333;
-      padding: 15px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      z-index: 1; /* Ensure the navigation bar is on top of other elements */
+    .filter {
+        padding: 8px 15px; /* Adjusted padding */
+        background-color: #1a2b3c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 0 5px;
     }
+</style>
 
-    /* Style the navigation links */
-    .nav-link {
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      margin: 0 10px; /* Add some spacing between links */
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav-link:hover {
-      background-color: #555; /* Change background color on hover */
-    }
-
-    /* Custom styles for the content container */
-    .container {
-      max-width: 800px;
-      margin: 80px auto;
-      padding: 20px;
-    }
-
-    /* Style the search bar */
-    .search-bar {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
-
-    /* Style for the back to home button */
-    .back-to-home {
-      background-color: #555;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-      margin: 10px;
-    }
-
-    /* Style for the password prompt container */
-    .password-prompt-container {
-      max-width: 400px;
-      margin: 100px auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    /* Style for the password input field */
-    .password-input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    /* Style for the unlock button */
-    .unlock-button {
-      background-color: #555;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-  </style>
+    </style>
 </head>
 <body>
-  <!-- Navigation bar -->
-  <div id="navbar">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="news.html" class="nav-link">News</a>
-    <a href="foreignaffairs.html" class="nav-link">Foreign Affairs</a>
-    <a href="geography.html" class="nav-link">Geography</a>
-    <a href="history.html" class="nav-link">History</a>
-    <a href="economy.html" class="nav-link">Economy</a>
-    <a href="culture.html" class="nav-link">Culture</a>
-    <a href="defense.html" class="nav-link">Defense</a>
-    <a href="healthcare.html" class="nav-link">Healthcare</a>
-    <a href="socialwelfare.html" class="nav-link">Social Welfare</a>
-    <a href="spaceadmin.html" class="nav-link">Space Administration</a>
-  </div>
+    <header>
+        <h1>Elementsia Factbook - Defense</h1>
+    </header>
+    <nav>
+        <ul>
+             <li><a href="#home">Home</a></li>
+            <li><a href="geography.html">Geography</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="legislation.html">Legislation</a></li>
+            <li><a href="space-administration.html">Space administration</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li><a href="social-welfare.html">Social welfare</a></li>
+            <li><a href="foreign-affairs.html">Foreign affairs</a></li>
+            <li><a href="defense.html">Defense</a></li>
+            <li><a href="economy.html">Economy</a></li>
+        </ul>
+    </nav>
+<main>
+    <section id="defense" class="overview">
+        <h2>Defense Vehicles</h2>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search vehicles">
+                <button class="search-button" onclick="searchVehicles()">Search</button>
+            </div>
+            <div class="filter-container">
+                <button class="filter" onclick="filterVehicles('all')">All</button>
+                <button class="filter" onclick="filterVehicles('land')">Land</button>
+                <button class="filter" onclick="filterVehicles('sea')">Sea</button>
+                <button class="filter" onclick="filterVehicles('air')">Air</button>
+            </div>
+        </div>
 
-  <!-- Content container (hidden until password is entered) -->
-  <div class="container" id="contentContainer" style="display: none;">
-    <h1>Elementsian Defense</h1>
-    <input type="text" class="search-bar" placeholder="Search defense...">
-    <p>
-      Add your defense content here. Showcase the military capabilities and national security of our nation.
-    </p>
-    <p>
-      Customize this page with more information about defense, images, and links as needed.
-    </p>
-    <!-- Back to Home link -->
-    <a href="index.html#welcome" class="back-to-home">Go Home</a>
-  </div>
+        <!-- All-terrain personnel carrier -->
+        <div class="article-frame">
+            <h3>All-Terrain Personnel Carrier</h3>
+            <img src="https://media.discordapp.net/attachments/1085268783003861082/1085272275055550464/9e6cd486-86db-4ab7-adf7-38f155badc20.jpg?width=630&height=630" alt="All-Terrain Personnel Carrier" class="vehicle-image">
+            <p>Approximately 754 of these carriers are in service or can deploy. The carrier is fitted with rear, side, and top cameras ensuring a 360° view of its surroundings. It is an 8×8 beast with a .50 caliber M2 turret on top that can spin 180°.</p>
+            <p>It has a total capacity of 15 personnel, counting the driver and gunner: 17.</p>
+        </div>
 
-  <!-- Password prompt container -->
-  <div class="password-prompt-container" id="passwordPromptContainer">
-    <h1>Enter the Defense Password</h1>
-    <input type="password" class="password-input" placeholder="Password" id="passwordInput">
-    <button class="unlock-button" onclick="checkPassword()">Unlock</button>
-  </div>
+        <!-- T15 Tank -->
+        <div class="article-frame">
+            <h3>T15 Tank</h3>
+            <img src="https://media.discordapp.net/attachments/1085268783003861082/1085273127929520138/b6ae04e6-62f5-4c36-a2da-fcab9fbeda22.jpg?width=630&height=630" alt="T15 Tank" class="vehicle-image">
+            <p>This tank is super expensive but heavily armored and armed. It has a 105mm gun alongside heat seeking capabilities. The tracks of this monster are absolutely unstoppable. With massive wheels, it can even cross shallow waters.</p>
+            <p>It has an auto reload feature. About 179 are in service.</p>
+            <p>It houses 3 personnel:</p>
+            <ul>
+                <li>Heat seeker</li>
+                <li>Gunner</li>
+                <li>Driver</li>
+            </ul>
+        </div>
 
-  <script>
-    // Password to unlock the defense content (change this to your desired password)
-    const correctPassword = "secretpassword";
+        <!-- AEV (Armored Engineering Vehicle) -->
+        <div class="article-frame">
+            <h3>Armored Engineering Vehicle (AEV)</h3>
+            <img src="https://media.discordapp.net/attachments/1085268783003861082/1085274137297174579/afcc1337-3db5-4097-ba61-084aea69a66d.jpg?width=630&height=630" alt="Armored Engineering Vehicle" class="vehicle-image">
+            <p>This vehicle is often deployed on repair missions as it is its intended duty. It is armored as well. The vehicle has a turret with a .25 caliber gun on top. It is usually deployed to more developed regions with roads and rails since it can't handle hills well.</p>
+            <p>About 378 are in service.</p>
+        </div>
+    </section>
+</main>
 
-    function checkPassword() {
-      const enteredPassword = document.getElementById("passwordInput").value;
-      if (enteredPassword === correctPassword) {
-        // Show the defense content container and hide the password prompt container
-        document.getElementById("contentContainer").style.display = "block";
-        document.getElementById("passwordPromptContainer").style.display = "none";
-      } else {
-        alert("Incorrect password. Please try again.");
-      }
-    }
-  </script>
+    <footer>
+        <p>&copy; 2023 Elementsia Factbook</p>
+    </footer>
+    <script>
+        function filterDefense(category) {
+            const defenseFrames = document.querySelectorAll('.defense-frame');
+
+            defenseFrames.forEach(frame => {
+                const frameCategory = frame.getAttribute('data-category');
+                if (category === 'all' || category === frameCategory) {
+                    frame.style.display = 'block';
+                } else {
+                    frame.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

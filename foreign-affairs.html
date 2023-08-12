@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementsia Factbook - Foreign Affairs</title>
+    <style>
+        /* Reset default styles and set some global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1a2b3c;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav li {
+            display: inline;
+        }
+
+        nav a {
+            color: #1a2b3c;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background-color: #a9a9a9;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        main h2 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1a2b3c;
+            color: #fff;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Overview section */
+        .overview {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Search bar and button */
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 5px 10px;
+            background-color: #1a2b3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Foreign Affairs statistics */
+        .foreign-stats {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Travel census */
+        .travel-census {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Emoji icons */
+        .emoji {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Elementsia Factbook - Foreign Affairs</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="geography.html">Geography</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="legislation.html">Legislation</a></li>
+            <li><a href="space-administration.html">Space administration</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li><a href="social-welfare.html">Social welfare</a></li>
+            <li><a href="foreign-affairs.html">Foreign affairs</a></li>
+            <li><a href="defense.html">Defense</a></li>
+            <li><a href="economy.html">Economy</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="foreign-affairs" class="overview">
+            <h2>Foreign Affairs</h2>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search countries">
+                <button class="search-button">Search</button>
+            </div>
+
+            <!-- Foreign Affairs Statistics -->
+            <div class="foreign-stats">
+                <h3>Foreign Affairs Statistics</h3>
+                <p>Orianne: 72<span class="emoji">📉</span></p>
+                <p>Rotondia: 84<span class="emoji">📉</span></p>
+                <p>Kartof: 90<span class="emoji">📉</span></p>
+                <p>Isomedia: 78<span class="emoji">📈</span></p>
+                <p>Stroana: 87<span class="emoji">🟨</span></p>
+                <p>Rantatord: 74<span class="emoji">📈</span></p>
+                <p>ITC: 81<span class="emoji">📉</span></p>
+                <p>DENIS PAVEL: 68<span class="emoji">📈</span></p>
+                <p>LAMPLIGHT: 86<span class="emoji">📈</span></p>
+                <p>THE OUTER RIM: 84<span class="emoji">📈</span></p>
+                <p>MINU: 74<span class="emoji">📈</span></p>
+                <p>Roylaii: 70<span class="emoji">📉</span></p>
+                <p>Namibdia: 65<span class="emoji">📉</span></p>
+            </div>
+
+            <!-- Travel Census -->
+            <div class="travel-census">
+                <h3>Elementsian Travel Census</h3>
+                <p><strong><span class="emoji">🟩</span> - Safe</strong></p>
+                <p><strong><span class="emoji">🟨</span> - Caution advised</strong></p>
+                <p><strong><span class="emoji">🟧</span> - Avoid if possible</strong></p>
+                <p><strong><span class="emoji">🟥</span> - Travel not recommended</strong></p>
+                <p><strong><span class="emoji">🟪</span> - Travel banned</strong></p>
+                <p>De Orianne: <span class="emoji">🟩</span></p>
+                <p>Grand Rotondia: <span class="emoji">🟩</span></p>
+                <p>Kalmar (Province of Elementsia, but treated otherwise): <span class="emoji">🟨</span></p>
+                <p>Elementsia — 07/05/2023 12:10</p>
+                <p>Lamplight: <span class="emoji">🟩🟨</span></p>
+                <p>Isomedia: <span class="emoji">🟨</span></p>
+                <p>Krimera: <span class="emoji">🟩</span></p>
+                <p>Rantatord: <span class="emoji">🟩</span></p>
+                <p>Sachiko: <span class="emoji">🟧🟥</span></p>
+                <p>Hakk'Ra Emirates: <span class="emoji">🟩</span></p>
+                <p>The Outer Rim: <span class="emoji">🟩</span></p>
+                <p>Kartof: <span class="emoji">🟧</span></p>
+                <p>Nationale Republiek: <span class="emoji">🟩</span></p>
+                <p>Denis Pavel: <span class="emoji">🟧</span></p>
+                <p>Minuvano: <span class="emoji">🟨</span></p>
+                <p>Elementsia — 07/05/2023 12:45</p>
+                <p>Roylaii: <span class="emoji">🟨🟧</span></p>
+                <p>Elementsia — 29/05/2023 18:59</p>
+                <p>Kreigswaffe: <span class="emoji">🟨</span></p>
+                <p>Elementsia — 24/06/2023 08:57</p>
+                <p>Namibidia: <span class="emoji">🟨</span></p>
+                <p>Odinburgh: <span class="emoji">🟨</span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Elementsia Factbook</p>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            $('.search-button').click(function() {
+                const searchInput = $('.search-input').val().toLowerCase();
+                const foreignStats = $('.foreign-stats p');
+                const travelCensus = $('.travel-census p');
+
+                foreignStats.hide();
+                travelCensus.hide();
+
+                foreignStats.each(function() {
+                    const country = $(this).text().toLowerCase();
+                    if (country.includes(searchInput)) {
+                        $(this).show();
+                    }
+                });
+
+                travelCensus.each(function() {
+                    const country = $(this).text().toLowerCase();
+                    if (country.includes(searchInput)) {
+                        $(this).show();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

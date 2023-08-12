@@ -1,167 +1,208 @@
-v<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Elementsian News</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementsia Factbook - News</title>
+    <style>
+        /* Reset default styles and set some global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
 
-    /* Styling for the navigation bar */
-    #navbar {
-      background-color: #333;
-      padding: 15px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      z-index: 1;
-    }
+        header {
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+            text-align: center;
+            padding: 1rem;
+        }
 
-    /* Style the navigation links */
-    .nav-link {
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      margin: 0 10px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
+        header h1 {
+            margin: 0;
+        }
 
-    .nav-link:hover {
-      background-color: #555;
-    }
+        nav {
+            background-color: #ffffff; /* White */
+            padding: 0.5rem;
+        }
 
-    /* Custom styles for the content container */
-    .container {
-      max-width: 800px;
-      margin: 80px auto;
-      padding: 20px;
-    }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
 
-    /* Style the search bar */
-    .search-bar {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
+        nav li {
+            display: inline;
+        }
 
-    /* Style for the black line at the top */
-    .black-line {
-      height: 4px;
-      background-color: black;
-    }
+        nav a {
+            color: #1a2b3c; /* Deeper blue text */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
 
-    /* Style for the article titles */
-    .article-title {
-      font-size: 24px;
-      font-weight: bold;
-    }
+        nav a:hover {
+            background-color: #a9a9a9; /* Sage green on hover */
+        }
 
-    /* Style for the article content */
-    .article-content {
-      margin-top: 10px;
-    }
+        main {
+            padding: 1rem;
+        }
 
-    /* Style for the article box/frame */
-    .article-box {
-      background-color: #f9f9f9;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+        main h2 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
 
-    /* Style for hiding articles that don't match the search query */
-    .hidden {
-      display: none;
-    }
-  </style>
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Overview section */
+        .overview {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Flag image */
+        .flag {
+            width: 100%;
+            max-width: 600px; /* Adjust the size as needed */
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        /* News articles */
+        .article-frame {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .search-bar {
+            width: 80%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            background-color: #1a2b3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation bar -->
-  <div id="navbar">
-    <a href="index.html#welcome" class="nav-link">Home</a>
-    <a href="news.html" class="nav-link">News</a>
-    <a href="foreignaffairs.html" class="nav-link">Foreign Affairs</a>
-    <a href="geography.html" class="nav-link">Geography</a>
-    <a href="history.html" class="nav-link">History</a>
-    <a href="economy.html" class="nav-link">Economy</a>
-    <a href="culture.html" class="nav-link">Culture</a>
-    <a href="defense.html" class="nav-link">Defense</a>
-    <a href="healthcare.html" class="nav-link">Healthcare</a>
-    <a href="socialwelfare.html" class="nav-link">Social Welfare</a>
-    <a href="spaceadmin.html" class="nav-link">Space Administration</a>
-  </div>
-
-  <!-- Content container -->
-  <div class="container" id="newsSection">
-    <div class="black-line"></div>
-    <h1>Elementsian News</h1>
-    <input type="text" class="search-bar" placeholder="Search news..." id="searchInput">
-    <div id="newsContent">
-      <div class="article-box">
-        <h2 class="article-title">Citizens of Kalmar,</h2>
-        <p class="article-content">
-          Today is a momentous day, as we gather to embrace the spirit of freedom and embark on a journey towards independence. Together, we stand united, our hearts beating as one, fueled by the passion to shape our destiny and break free from the chains of Elementsia.
-        </p>
-        <p class="article-content">
-          As we march towards sovereignty, let us remember this day as the last day of the republic under Elementsia's dominion. Tomorrow, we shall rise as an autonomous province, guided by our aspirations and the dreams that bind us together.
-        </p>
-      </div>
-
-      <div class="article-box">
-        <h2 class="article-title">Breaking News</h2>
-        <p class="article-content">
-          In a significant development, Elementsia and Romanic have formalized a trade agreement, solidifying their economic ties. This landmark deal aims to boost commerce between the two nations, fostering prosperity and growth.
-        </p>
-        <p class="article-content">
-          Highlights of the Trade Agreement include:
-        </p>
-        <ul class="article-content">
-          <li>Tariff reductions on essential goods and services.</li>
-          <li>Increased investment opportunities to stimulate economic cooperation.</li>
-          <li>Knowledge and technology sharing initiatives to enhance innovation.</li>
+    <header>
+        <h1>Elementsia Factbook - News</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="geography.html">Geography</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="legislation.html">Legislation</a></li>
+            <li><a href="space-administration.html">Space administration</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li><a href="social-welfare.html">Social welfare</a></li>
+            <li><a href="foreign-affairs.html">Foreign affairs</a></li>
+            <li><a href="defense.html">Defense</a></li>
+            <li><a href="economy.html">Economy</a></li>
         </ul>
-        <p class="article-content">
-          Furthermore, Elementsia and Romanic have established a partial defense contract, signifying a mutual commitment to regional security and stability. As part of this agreement, Romanic will deploy 2,000 troops to the border of Kalmar, reinforcing the region's defense capabilities.
-        </p>
-        <p class="article-content">
-          Both nations' leaders have expressed their dedication to promoting peace and cooperation amid global challenges. This strategic alliance is expected to bolster their defenses and strengthen diplomatic relations.
-        </p>
-        <p class="article-content">
-          The trade and defense agreement marks a new era of collaboration between Elementsia and Romanic, and its impact on the global stage is closely watched by the international community.
-        </p>
-      </div>
-    </div>
-  </div>
+    </nav>
+    <main>
+        <section id="news" class="overview">
+            <h2>Latest News</h2>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search headlines">
+                    <button class="search-button" onclick="searchNews()">Search</button>
+                </div>
+            </div>
 
-  <script>
-    // JavaScript for the search functionality
-    function handleSearch() {
-      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
-      const articles = document.getElementsByClassName("article-box");
+            <!-- First Article -->
+            <div class="article-frame">
+                <h3>Elementsia and Denis Pavel Forge Trade Agreement and Establish Embassies</h3>
+                <p>We are pleased to announce that Elementsia and Denis Pavel have officially signed a trade agreement, aiming to boost economic cooperation between the two nations. The highlights of this agreement include tariff reductions, increased investment opportunities, and collaborative efforts in research and technology.</p>
+                <p>In addition, both countries have taken a significant step towards strengthening diplomatic ties by opening embassies in each other's capitals. These embassies will serve as crucial centers for fostering communication and understanding.</p>
+                <p>Leaders from Elementsia and Denis Pavel are enthusiastic about this strategic partnership, and the international community looks forward to witnessing the positive impact of this alliance on the global stage. Stay tuned for further updates as this promising relationship unfolds.</p>
+            </div>
 
-      for (const article of articles) {
-        const articleContent = article.innerText.toLowerCase();
-        const isMatch = articleContent.includes(searchQuery);
+            <!-- Second Article -->
+            <div class="article-frame">
+                <h3>Terati, Romanic-EFR Border</h3>
+                <p>A stream of refugees Is seen for over a mile trying to cross into the Romanic Imperium. Romanic forces have set up a checkpoint on the border Scanning all incoming refugees for known viruses and weapons. A nearby hospital has been commandeered for the sick and wounded. Already tens of thousands of Refugees have been let in. And with them unbeknownst to the Roman Soldiers they carried Sav-23. Within days major outbreaks of the virus appeared in major cities. Hospitals are filled with those infected with Sav 23. The Sounds of people puking their guts out fills the airs of many hospitals as the Virus quickly spreads through an unprepared population. The Government has asked people to stay inside. With people starting to work from home. The economy starts to plummet.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Elementsia Factbook</p>
+    </footer>
+    <script>
+        function searchNews() {
+            const searchInput = document.querySelector('.search-input').value.toLowerCase();
+            const articleFrames = document.querySelectorAll('.article-frame');
 
-        if (!isMatch) {
-          article.classList.add("hidden");
-        } else {
-          article.classList.remove("hidden");
+            articleFrames.forEach(frame => {
+                const headline = frame.querySelector('h3').innerText.toLowerCase();
+                if (headline.includes(searchInput)) {
+                    frame.style.display = 'block';
+                } else {
+                    frame.style.display = 'none';
+                }
+            });
         }
-      }
-    }
-
-    document.getElementById("searchInput").addEventListener("input", handleSearch);
-  </script>
+    </script>
 </body>
 </html>

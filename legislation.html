@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementsia Factbook - Legislation</title>
+    <style>
+        /* Reset default styles and set some global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #ffffff; /* White */
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav li {
+            display: inline;
+            font-size: 16px; /* Increased font size for navigation links */
+        }
+
+        nav a {
+            color: #1a2b3c; /* Deeper blue text */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            background-color: #a9a9a9; /* Sage green on hover */
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        main h2 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+            font-size: 20px; /* Larger font size for section headings */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Overview section */
+        .overview {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Legislation items */
+        .legislation-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px; /* Increased font size for legislation items */
+        }
+
+        /* Search and filter */
+        .search-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .filter-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 10px; /* Add some spacing between search bar and filter tabs */
+        }
+
+        .filter-tab {
+            padding: 5px 10px;
+            background-color: #1a2b3c; /* Deeper blue */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .active-filter {
+            background-color: #a9a9a9; /* Sage green on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elementsia Factbook - Legislation</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home" style="font-size: 16px;">Home</a></li>
+            <li><a href="geography.html" style="font-size: 16px;">Geography</a></li>
+            <li><a href="history.html" style="font-size: 16px;">History</a></li>
+            <li><a href="culture.html" style="font-size: 16px;">Culture</a></li>
+            <li><a href="legislation.html" style="font-size: 16px;">Legislation</a></li>
+            <li><a href="space-administration.html" style="font-size: 16px;">Space administration</a></li>
+            <li><a href="news.html" style="font-size: 16px;">News</a></li>
+            <li><a href="healthcare.html" style="font-size: 16px;">Healthcare</a></li>
+            <li><a href="social-welfare.html" style="font-size: 16px;">Social welfare</a></li>
+            <li><a href="foreign-affairs.html" style="font-size: 16px;">Foreign affairs</a></li>
+            <li><a href="defense.html" style="font-size: 16px;">Defense</a></li>
+            <li><a href="economy.html" style="font-size: 16px;">Economy</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="legislation" class="overview">
+            <h2>Legislation</h2>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search legislation">
+                    <button class="search-button" onclick="searchLegislation()">Search</button>
+                </div>
+            </div>
+            <div class="filter-container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active-filter" onclick="filterLegislation('all')">All</button>
+                    <button class="filter-tab" onclick="filterLegislation('finances')">Finances</button>
+                    <button class="filter-tab" onclick="filterLegislation('infrastructure')">Infrastructure</button>
+                    <button class="filter-tab" onclick="filterLegislation('space-admin')">Space Admin</button>
+                    <button class="filter-tab" onclick="filterLegislation('social-welfare')">Social Welfare</button>
+                    <button class="filter-tab" onclick="filterLegislation('foreign-affairs')">Foreign Affairs</button>
+                    <button class="filter-tab" onclick="filterLegislation('defense')">Defense</button>
+                    <button class="filter-tab" onclick="filterLegislation('healthcare')">Healthcare</button>
+                    <button class="filter-tab" onclick="filterLegislation('culture')">Culture</button>
+                </div>
+            </div>
+
+            <div class="legislation-item">
+                <h3>Finance Act 2023</h3>
+                <p>Legislation related to financial matters and budget allocations.</p>
+                <p>Category: Finances</p>
+            </div>
+
+            <div class="legislation-item">
+                <h3>Infrastructure Development Plan</h3>
+                <p>Legislation concerning the planning and execution of infrastructure projects.</p>
+                <p>Category: Infrastructure</p>
+            </div>
+
+            <div class="legislation-item">
+                <h3>Space Administration Act</h3>
+                <p>Legislation governing the establishment and operation of the national space agency.</p>
+                <p>Category: Space Admin</p>
+            </div>
+
+            <div class="legislation-item">
+                <h3>Social Welfare Enhancement Act</h3>
+                <p>Legislation aimed at improving social welfare programs and support systems.</p>
+                <p>Category: Social Welfare</p>
+            </div>
+
+            <!-- Add more legislation items here -->
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Elementsia Factbook</p>
+    </footer>
+    <script>
+        function searchLegislation() {
+            const searchInput = document.querySelector('.search-input').value.toLowerCase();
+            const legislationItems = document.querySelectorAll('.legislation-item');
+
+            legislationItems.forEach(item => {
+                const title = item.querySelector('h3').innerText.toLowerCase();
+                if (title.includes(searchInput)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function filterLegislation(category) {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            filterTabs.forEach(tab => tab.classList.remove('active-filter'));
+
+            if (category === 'all') {
+                const allItems = document.querySelectorAll('.legislation-item');
+                allItems.forEach(item => item.style.display = 'block');
+            } else {
+                const itemsToDisplay = document.querySelectorAll(`.legislation-item p:contains(${category})`);
+                itemsToDisplay.forEach(item => item.parentElement.style.display = 'block');
+            }
+
+            const activeTab = document.querySelector(`.filter-tab:contains(${category})`);
+            activeTab.classList.add('active-filter');
+        }
+        $(document).ready(function() {
+            function searchLegislation() {
+                const searchInput = $('.filter-input').val().toLowerCase();
+                const legislationItems = $('.legislation-item');
+
+                legislationItems.each(function() {
+                    const title = $(this).find('h3').text().toLowerCase();
+                    if (title.includes(searchInput)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+
+            function filterLegislation(category) {
+                $('.filter-tab').removeClass('active-filter');
+
+                if (category === 'All') {
+                    $('.legislation-item').show();
+                } else {
+                    $('.legislation-item').hide();
+                    $(`.legislation-item:contains("${category}")`).show();
+                }
+
+                $(`.filter-tab:contains("${category}")`).addClass('active-filter');
+            }
+
+            $('.filter-button').click(function() {
+                searchLegislation();
+            });
+
+            $('.filter-tab').click(function() {
+                const category = $(this).text();
+                filterLegislation(category);
+            });
+        });
+    
+    </script>
+</body>
+</html>
